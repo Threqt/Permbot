@@ -1,0 +1,15 @@
+{
+  "name": "tbcbot",
+  "version": "1.0.0",
+  "description": "A bot made for The Beaver Company",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "threqt",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^11.4.2",
+    "noblox.js": "^4.2.6"
+  }
+}
