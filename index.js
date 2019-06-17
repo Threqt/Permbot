@@ -26,7 +26,7 @@ bot.on("message", async message => {
 
   if(cmd === `ping`){
     let msg = await message.channel.send("Testing how long it takes for perm to attach to bot...")
-    msg.edit(`It takes ${msg.createdTimestamp - message.createdTimestamp}ms to attach perm to bot. Ping is ${Math.round(bot.ping)}`)
+    msg.edit(`It takes ${msg.createdTimestamp - message.createdTimestamp}ms to attach perm to bot. Ping is ${Math.round(bot.ping)}ms`)
   }
 
 });
