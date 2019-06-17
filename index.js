@@ -1,5 +1,7 @@
 const config = require("./config");
 const Discord = require("discord.js");
+const rbx = require("noblox.js")
+const db = require("quick.db")
 const bot = new Discord.Client({
   disableEverybody: true
 });
