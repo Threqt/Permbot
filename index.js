@@ -102,18 +102,18 @@ bot.on("message", async message => {
     let roleEmbed = new Discord.RichEmbed()
       .setAuthor("TES Bot", bot.user.avatarURL)
       .setThumbnail(sicon)
-      .setTitle(`DEMOTION BY ` + message.author.username)
+      .setTitle(`ROLE REMOVED BY ` + message.author.username)
       .setDescription(`LOG`)
-      .addField("Demoted Person:", roleMember.user.username, true)
+      .addField("Person:", roleMember.user.username, true)
       .addField("Role Removed:", realrole.name, true)
-      .addField("Demotion Channel:", message.channel, true)
+      .addField("Channel:", message.channel, true)
       .addField("Time:", message.createdAt, true)
       .setFooter("Prefix: ! | This bot is still in it's early phases | Go kill some HBC for me will ya?!", bot.user.avatarURL)
       .setTimestamp();
 
     roleMember.removeRole(realrole.id).then(messag => {
       message.reply(`${message.author.username} has removed the role ${realrole.name} from ${roleMember.user.username}`)
-      let channel = message.guild.channels.find(`name`, `demotion-logs`)
+      let channel = message.guild.channels.find(`name`, `logs`)
       channel.send(roleEmbed);
     })
   }
